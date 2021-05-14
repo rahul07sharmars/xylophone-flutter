@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
     player.play('note$soundNumber.wav');
   }
 
-  Widget makekey(Color col) {
+  Widget makekey(Color colCode, int soundNumber) {
     return Expanded(
       child: FlatButton(
-        color: col,
+        color: colCode,
         onPressed: () {
           playSound(1);
         },
@@ -33,13 +33,13 @@ class MyApp extends StatelessWidget {
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            makekey(Colors.red),
-            makekey(Colors.orange),
-            makekey(Colors.yellow),
-            makekey(Colors.green),
-            makekey(Colors.teal),
-            makekey(Colors.blue),
-            makekey(Colors.purple),
+            makekey(Colors.red,1),
+            makekey(Colors.orange,2),
+            makekey(Colors.yellow,3),
+            makekey(Colors.green,4),
+            makekey(Colors.teal,5),
+            makekey(Colors.blue,6),
+            makekey(Colors.purple,7),
           ],
         )),
       ),
