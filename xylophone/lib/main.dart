@@ -7,6 +7,12 @@ void main() {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+  //function
+  void playSound(int soundNumber) {
+    final player = AudioCache();
+    player.play('note$soundNumber.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,68 +20,46 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
             child: Column(
           children: [
-            TextButton(
+            FlatButton(
+              color: Colors.red,
               onPressed: () {
-                final player = AudioCache();
-                player.play('note1.wav');
+                playSound(1);
               },
-              child: Center(
-                child: Text('Click Me!'),
-              ),
             ),
-            TextButton(
+            FlatButton(
+                color: Colors.orange,
+                onPressed: () {
+                  playSound(2);
+                }),
+            FlatButton(
+              color: Colors.yellow,
               onPressed: () {
-                final player = AudioCache();
-                player.play('note2.wav');
+                playSound(3);
               },
-              child: Center(
-                child: Text('Click Me!'),
-              ),
             ),
-            TextButton(
+            FlatButton(
+              color: Colors.green,
               onPressed: () {
-                final player = AudioCache();
-                player.play('note3.wav');
+               playSound(4);
               },
-              child: Center(
-                child: Text('Click Me!'),
-              ),
             ),
-            TextButton(
+            FlatButton(
+              color: Colors.teal,
               onPressed: () {
-                final player = AudioCache();
-                player.play('note4.wav');
+                playSound(5);
               },
-              child: Center(
-                child: Text('Click Me!'),
-              ),
             ),
-            TextButton(
+            FlatButton(
+              color: Colors.blue,
               onPressed: () {
-                final player = AudioCache();
-                player.play('note5.wav');
+                playSound(6);
               },
-              child: Center(
-                child: Text('Click Me!'),
-              ),
             ),
-            TextButton(
+            FlatButton(
+              color: Colors.purple,
               onPressed: () {
-                final player = AudioCache();
-                player.play('note6.wav');
+                playSound(7);
               },
-              child: Center(
-                child: Text('Click Me!'),
-              ),
-            ),
-            TextButton(
-              onPressed: () {
-                final player = AudioCache();
-                player.play('note7.wav');
-              },
-              child: Center(
-                child: Text('Click Me!'),
-              ),
             ),
           ],
         )),
