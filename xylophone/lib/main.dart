@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       child: FlatButton(
         color: colCode,
         onPressed: () {
-          playSound(1);
+          playSound(soundNumber);
         },
       ),
     );
@@ -33,13 +33,13 @@ class MyApp extends StatelessWidget {
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            makekey(Colors.red,1),
-            makekey(Colors.orange,2),
-            makekey(Colors.yellow,3),
-            makekey(Colors.green,4),
-            makekey(Colors.teal,5),
-            makekey(Colors.blue,6),
-            makekey(Colors.purple,7),
+            makekey(Colors.red, 1),
+            makekey(Colors.orange, 2),
+            makekey(Colors.yellow, 3),
+            makekey(Colors.green, 4),
+            makekey(Colors.teal, 5),
+            makekey(Colors.blue, 6),
+            makekey(Colors.purple, 7),
           ],
         )),
       ),
